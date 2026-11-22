@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>The Coffee House</title>
+
+    <style>
+      /* Basic style's */
+      body {
+        margin: 0;
+        background-color: #100d0b;
+        color: white;
+        font-family: Arial, sans-serif;
+
+        background-image:
+          linear-gradient(rgba(16, 13, 11, 0.65), rgba(16, 13, 11, 0.85)),
+          url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1950&q=80");
+
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+
+      /* Navigation bar */
+
+      header {
+        background-color: black;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid goldenrod;
+      }
+
+      .logo, h1, h2, h3, .price {
+    background: linear-gradient(
+        90deg,
+        #d99e08,
+        #f3e7c5
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+      }
+
+      nav a:hover {
+        color: goldenrod;
+      }
+
+      /* Main banner */
+      .banner {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .banner h1 {
+        font-size: 38px;
+        font-family: Georgia, serif;
+      }
+
+      .banner h1 span {
+        color: goldenrod;
+      }
+
+      .banner p {
+        color: #cccccc;
+        line-height: 1.8;
+      }
+
+      .banner img {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .btn {
+        background-color: goldenrod;
+        color: black;
+        padding: 12px 18px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+      }
+        
+/* Coffee menu section */
+.menu {
+    background-color: #1c1713;
+    padding: 35px;
+    text-align: center;
+    border-top: 2px solid goldenrod;
+}
+
+.menu h2 {
+    color: #d99e08;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.menu p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Coffee cards container */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* Individual coffee card */
+.card {
+    background-color: #302019;
+    width: 250px;
+    height: 370px;
+    padding: 15px;
+    border: 1px solid #70552f;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(217, 158, 8, 0.25);
+    border-color: rgb(218, 169, 43);
+}
+
+/* Coffee images */
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* Coffee name */
+.card h3 {
+    color: #e5b342;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* Coffee description */
+.card p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Coffee price */
+.price {
+    background: linear-gradient(90deg, #d99e08, #f3e7c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+      /* Coffee cards container */
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+        align-items: stretch;
+      }
+
+      /* All cards have equal width and height */
+      .card {
+        background-color: #302019;
+        width: 250px;
+        height: 370px;
+        padding: 15px;
+        border: 1px solid #70552f;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* All images have equal size */
+      .card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+      }
+
+      /* Coffee name */
+      .card h3 {
+        color: rgb(230, 182, 60);
+      }
+
+      /* Coffee description */
+      .card p {
+        color: #eae5e5;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      /* Coffee price */
+      .price {
+        color: rgb(230, 182, 60);
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: auto;
+        padding-top: 10px;
+      }
+
+       /* Contact section */
+.contact {
+    background-color: #100d0b;
+    padding: 45px;
+    text-align: center;
+    border-top: 2px solid goldenrod;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 35px;
+    margin: 30px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+    background-color: #302019;
+    border: 1px solid #70552f;
+    border-radius: 10px;
+    padding: 25px;
+    width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: goldenrod;
+}
+
+.contact-info p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+/* Contact form */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    background-color: #1c1713;
+    border: 1px solid #70552f;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.contact-form button {
+    background-color: goldenrod;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ebe4e4cf;
+}
+
+/* Footer */
+footer {
+    background-color: #302019;
+    padding: 25px;
+    text-align: center;
+    border-top: 2px solid rgb(223, 173, 49);
+}
+
+footer h3 {
+    color: rgb(230, 182, 60);
+}
+
+footer p {
+    color: #ffffff;
+    line-height: 1.8;
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <div class="logo">The Coffee House</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main banner -->
+    <section class="banner" id="home">
+      <div>
+        <h1>
+          The Coffee House<br />
+          <span>Crafted with Passion</span>
+        </h1>
+
+        <p>
+          Enjoy the rich taste of freshly brewed coffee.
+          <br />
+          We prepare every cup with love,care and passion.
+        </p>
+
+        <a href="#menu" class="btn">Explore Menu</a>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
+        alt="Fresh coffee"
+      />
+    </section>
+
+<!-- Coffee menu -->
+
+<section class="menu" id="menu">
+    <h2>Our Coffee Menu</h2>
+    <p>Explore our delicious collection of handcrafted coffees!</p>
+
+    <!-- 1. HOT COFFEE -->
+
+    <h2>Hot Coffee</h2>
+    <p>Warm, fresh and freshly brewed coffee.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="Latte">
+            <h3>Classic Latte</h3>
+            <p>Smooth espresso mixed with steamed milk and creamy foam.</p>
+            <div class="price">₹180</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=500&q=80" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Rich espresso topped with thick and creamy milk foam.</p>
+            <div class="price">₹200</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Espresso">
+            <h3>Bold Espresso</h3>
+            <p>Strong and aromatic coffee with a rich flavour.</p>
+            <div class="price">₹150</div>
+        </div>
+
+    </div>
+
+    <!-- 2. COLD COFFEE -->
+
+    <h2>Cold Coffee</h2>
+    <p>Chilled coffee to refresh your mood.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="Cold Coffee">
+            <h3>Classic Cold Coffee</h3>
+            <p>Chilled coffee blended with milk and ice.</p>
+            <div class="price">₹180</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80" alt="Iced Latte">
+            <h3>Iced Latte</h3>
+            <p>Fresh espresso mixed with cold milk and ice cubes.</p>
+            <div class="price">₹200</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=500&q=80" alt="Cold Brew">
+            <h3>Cold Brew</h3>
+            <p>Slow-brewed coffee served chilled for a smooth taste.</p>
+            <div class="price">₹220</div>
+        </div>
+
+    </div>
+
+    <!-- 3. SPECIAL AND FLAVOURED COFFEE -->
+
+    <h2>Special & Flavoured Coffee</h2>
+    <p>Special flavours for your coffee cravings.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=500&q=80" alt="Mocha">
+            <h3>Chocolate Mocha</h3>
+            <p>A delicious combination of espresso, chocolate and milk.</p>
+            <div class="price">₹230</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=500&q=80" alt="Caramel Coffee">
+            <h3>Caramel Macchiato</h3>
+            <p>Espresso and creamy milk topped with sweet caramel.</p>
+            <div class="price">₹250</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=500&q=80" alt="Vanilla Coffee">
+            <h3>Vanilla Latte</h3>
+            <p>Classic latte with a sweet and smooth vanilla flavour.</p>
+            <div class="price">₹220</div>
+        </div>
+
+    </div>
+
+    <!-- 4. BLENDED AND DESSERT COFFEE -->
+
+    <h2>Blended & Dessert Coffee</h2>
+    <p>Delicious coffee treats for dessert lovers.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80" alt="Frappuccino">
+            <h3>Coffee Frappuccino</h3>
+            <p>Blended coffee with milk, ice and creamy toppings.</p>
+            <div class="price">₹260</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80" alt="Oreo Coffee">
+            <h3>Oreo Coffee</h3>
+            <p>Cold coffee blended with crunchy Oreo biscuits.</p>
+            <div class="price">₹280</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=500&q=80" alt="Affogato">
+            <h3>Affogato</h3>
+            <p>Vanilla ice cream topped with a shot of hot espresso.</p>
+            <div class="price">₹250</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- About section -->
+
+    <section class="menu" id="about">
+      <h2>About The Coffee House</h2>
+
+      <p>
+        We believe that great coffee brings people together.
+        <br />
+        Our goal is to provide quality coffee and a wonderful experience.
+      </p>
+
+    </section>
+
+    <!-- Footer section -->
+
+    <footer id="contact">
+
+     
+
+      <div class="contact-form">
+
+            <h3>Send Us a Message</h3>
+
+            <form>
+
+                <input type="text" placeholder="Enter Your Name" required>
+
+                <input type="email" placeholder="Enter Your Email" required>
+
+                <input type="text" placeholder="Enter Subject">
+
+                <textarea placeholder="Write Your Message..." rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+     <h3>Visit Our Cafe</h3>
+
+            <p>Address: Indore, Madhya Pradesh, India</p>
+
+            <p>Phone: +91 9876543210</p>
+
+      <p>Email: xyz@gmail.com</p>
+
+      <p>Opening Hours: 9 AM - 10 PM</p>
+       <p>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                <a href="https://www.pinterest.com/" target="_blank">Pinterest</a>
+            </p>
+            
+
+      <p>2026 The Coffee House. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
